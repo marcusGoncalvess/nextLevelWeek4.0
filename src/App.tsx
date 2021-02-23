@@ -1,17 +1,17 @@
 import React from 'react';
 import GlobalStyle from './styles/global';
 
-function App() {
+import ExperienceBar from './components/ExperienceBar';
+
+import { Container } from './styles';
+
+const App: React.FC = () => {
   return (
-    <>
+    <Container>
       <GlobalStyle />
-      <div className="App">
-        <button type="button" style={{ height: '3rem' }}>
-          teste
-        </button>
-      </div>
-    </>
+      <ExperienceBar />
+    </Container>
   );
-}
+};
 
 export default App;

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   :root {
@@ -32,7 +32,7 @@ export default createGlobalStyle`
       font-size: 87.5%;
     }
   }
-  
+
   body {
     background: var(--background);
     color: var(--text);
