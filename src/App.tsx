@@ -1,8 +1,14 @@
+import React from "react";
+import GlobalStyle from "./styles/global";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello NLW</h1>
-    </div>
+    <>
+      <GlobalStyle></GlobalStyle>
+      <div className="App">
+        <button style={{ height: "3rem" }}>teste</button>
+      </div>
+    </>
   );
 }
 
