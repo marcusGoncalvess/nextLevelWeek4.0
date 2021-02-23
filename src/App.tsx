@@ -1,12 +1,14 @@
-import React from "react";
-import GlobalStyle from "./styles/global";
+import React from 'react';
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
     <>
-      <GlobalStyle></GlobalStyle>
+      <GlobalStyle />
       <div className="App">
-        <button style={{ height: "3rem" }}>teste</button>
+        <button type="button" style={{ height: '3rem' }}>
+          teste
+        </button>
       </div>
     </>
   );
