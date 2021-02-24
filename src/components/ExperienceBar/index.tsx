@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Bar } from './styles';
 
-const ExperienceBar: React.FC = () => {
+const ExperienceBar = () => {
   return (
     <Container>
       <span>0 xp</span>
