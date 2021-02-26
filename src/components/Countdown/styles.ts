@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -51,13 +51,31 @@ export const CountdownButton = styled.button`
   border-radius: 5px;
 
   background: var(--blue);
+
   color: var(--white);
 
   font-size: 1.25rem;
   font-weight: 600;
   transition: 0.2s;
+  outline: none;
 
-  &:hover {
+  &:not(:disabled):hover {
     background: var(--blue-dark);
+  }
+
+  &.active {
+    background: var(--white);
+    color: var(--title);
+
+    &:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+  }
+
+  &:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
   }
 `;
