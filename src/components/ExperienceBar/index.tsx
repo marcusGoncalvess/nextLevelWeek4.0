@@ -1,17 +1,23 @@
-import React from 'react';
+import React from "react";
+import { useChallenges } from "../../contexts/ChallengesContext";
 
-import { Container, Bar } from './styles';
+import { Container, Bar } from "./styles";
 
 const ExperienceBar = () => {
+  const { currentExperience, experienceToNextLevel } = useChallenges();
+
+  const percentToNextLevel =
+    Math.round(currentExperience * 100) / experienceToNextLevel;
+
   return (
     <Container>
       <span>0 xp</span>
-      <Bar currentPosition={50}>
+      <Bar currentPosition={percentToNextLevel}>
         <div />
 
-        <span>300 xp</span>
+        {currentExperience !== 0 && <span>{currentExperience} xp</span>}
       </Bar>
-      <span>600 xp</span>
+      <span>{experienceToNextLevel} xp</span>
     </Container>
   );
 };

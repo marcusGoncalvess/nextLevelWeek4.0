@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useChallenges } from "../../contexts/ChallengesContext";
 
 import { Container, CountdownButton } from "./styles";
 
@@ -11,9 +12,10 @@ const Countdown = () => {
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
-
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
   const [secondLeft, secondRight] = String(seconds).padStart(2, "0").split("");
+
+  const { startNewChallenge } = useChallenges();
 
   function startCountdown() {
     setIsActive(true);
@@ -33,6 +35,7 @@ const Countdown = () => {
     } else if (isActive && time === 0) {
       setHasFinished(true);
       setIsActive(false);
+      startNewChallenge();
     }
   }, [isActive, time]);
 
