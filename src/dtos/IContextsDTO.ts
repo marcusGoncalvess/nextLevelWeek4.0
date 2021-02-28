@@ -2,6 +2,9 @@ import { ReactNode } from "react";
 
 export interface ChallengesProviderProps {
   children: ReactNode;
+  level: number;
+  challengesCompleted: number;
+  currentExperience: number;
 }
 
 export interface CountdownProviderProps {
@@ -24,4 +27,5 @@ export interface ChallengesContextData {
   resetChallenge: () => void;
   completeChallenge: () => void;
   activeChallenge: Challenge;
+  closeLevelUpModal: () => void;
 }
