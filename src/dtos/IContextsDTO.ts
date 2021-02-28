@@ -4,6 +4,10 @@ export interface ChallengesProviderProps {
   children: ReactNode;
 }
 
+export interface CountdownProviderProps {
+  children: ReactNode;
+}
+
 interface Challenge {
   type: "body" | "eye";
   description: string;
@@ -18,5 +22,6 @@ export interface ChallengesContextData {
   levelUp: () => void;
   startNewChallenge: () => void;
   resetChallenge: () => void;
+  completeChallenge: () => void;
   activeChallenge: Challenge;
 }

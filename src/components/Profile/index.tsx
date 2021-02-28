@@ -1,4 +1,5 @@
 import React from "react";
+import { useChallenges } from "../../contexts/ChallengesContext";
 
 import { Container } from "./styles";
 
@@ -7,6 +8,7 @@ import { Container } from "./styles";
 // }
 
 const Profile = () => {
+  const { level } = useChallenges();
   return (
     <Container>
       <img src="https://github.com/marcusGoncalvess.png" alt="Marcus" />
@@ -15,7 +17,7 @@ const Profile = () => {
         <strong>Marcus</strong>
         <div>
           <img src="icons/level.svg" alt="Level" />
-          <p>Level 1</p>
+          <p>Level {level}</p>
         </div>
       </div>
     </Container>
